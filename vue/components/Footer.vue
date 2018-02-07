@@ -1,5 +1,6 @@
 <template>
-  <footer>
-    Visit our website for more documentation : <a href="https://nuxtjs.org" target="_blank">nuxtjs.org</a>
+  <footer class="main-footer">
+    <p><i class="fa fa-envelope"></i> <a href="mailto:lecture@lhy.kr">lecture@lhy.kr</a></p>
+    <p>© Copyright 2018. Lee HanYeong</p>
   </footer>
 </template>

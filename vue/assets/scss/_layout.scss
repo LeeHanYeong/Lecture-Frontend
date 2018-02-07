@@ -1,0 +1,41 @@
+@import 'variables';
+$header-height: 68px;
+$footer-height: 60px;
+
+a.navbar-brand {
+    margin-right: 2rem;
+}
+#wrap {
+    display: flex;
+    flex-direction: column;
+}
+#content-block {
+    min-height: calc(100vh - (#{$header-height} + #{$footer-height}));
+}
+header.main-header {
+    height: $header-height;
+    letter-spacing: .03rem;
+
+    > .navbar {
+        height: 100%;
+    }
+}
+footer.main-footer {
+    // 자신에 대한 정보
+    width: 100%;
+    align-self: flex-end;
+    height: $footer-height;
+    color: white;
+    background-color: $primary;
+    font-size: 12px;
+
+    // 자식들
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        margin: 0;
+    }
+}

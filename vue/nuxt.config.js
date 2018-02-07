@@ -11,17 +11,31 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script: [
+      { src: '/js/jquery.min.js' },
+      { src: '/js/popper.min.js' },
+      { src: '/js/bootstrap.min.js' }
     ]
   },
   /*
   ** Global CSS
   */
-  css: ['~/assets/css/main.css'],
+  css: [
+    '~/assets/css/bootstrap.min.css',
+    '~/assets/scss/custom.scss',
+    '~/assets/css/main.css'
+  ],
+  modules: [
+    ['bootstrap-vue/nuxt', { css: false }]
+  ],
   /*
   ** Add axios globally
   */
   build: {
-    vendor: ['axios'],
+    vendor: [
+      'axios'
+    ],
     /*
     ** Run ESLINT on save
     */
