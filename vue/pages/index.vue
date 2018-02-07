@@ -18,12 +18,16 @@
 </template>
 
 <script>
-import axios from '~/plugins/axios'
+import { mapGetters } from 'vuex'
 
 export default {
-  async asyncData () {
-    let { data } = await axios.get('/api/users')
-    return { users: data }
+  async asyncData ({ store }) {
+    await store.dispatch('course/getSections')
+  },
+  computed: {
+    ...mapGetters([
+      'course/sections'
+    ])
   },
   head () {
     return {
